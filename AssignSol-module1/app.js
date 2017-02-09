@@ -21,24 +21,20 @@
     };
 
     function splitString(stringToSplit, separator) {
-      //console.log('new: '+stringToSplit);
       var arrayOfStrings = stringToSplit.split(separator);
-      if (arrayOfStrings.length<=3) {
+
+      //Bonus part 3 has not been implemented yet!
+      var totallength = arrayOfStrings.length;
+      for (var i = 0; i < arrayOfStrings.length; i++) {
+        if (arrayOfStrings[i].trim()=='') {
+          totallength--;
+        }
+      }
+      if (totallength<=3) {
         return "Enjoy!";
-      } else if (arrayOfStrings.length>3) {
+      } else if (totallength>3) {
         return "Too much!";
       }
-      // var totallength = 0;
-      // for (var i = 0; i < arrayOfStrings.length; i++) {
-      //   if (arrayOfStrings[i].length>0 && arrayOfStrings[i]!=null &&  arrayOfStrings[i]!=' ') {
-      //     totallength++;
-      //   }
-      // }
-      // if (totallength<=3) {
-      //   return "Enjoy!";
-      // } else if (totallength>3) {
-      //   return "Too much!";
-      // }
     }
 
   }
