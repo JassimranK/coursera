@@ -8,34 +8,41 @@
   function LunchCheckController($scope){
 
     $scope.CheckIfTooMuch = function(){
-      $scope.customStyle = {};
-      if($scope.items == null || $scope.items == '') {
+      if ($scope.items == null){
         $scope.showMsg = "Please enter data first!";
         $scope.myStyle = {"color":"red"};
         $scope.boxStyle = {"border-color": "red"};
       } else {
-        $scope.myStyle = {"color":"green"};
-        $scope.showMsg = splitString($scope.items, ",");
-        $scope.boxStyle = {"border-color": "green"};
+        var noOfItems = splitString($scope.items, ",");
+        if(noOfItems==0){
+          $scope.showMsg = "Please enter data first!";
+          $scope.myStyle = {"color":"red"};
+          $scope.boxStyle = {"border-color": "red"};
+        } else {
+          $scope.myStyle = {"color":"green"};
+          $scope.boxStyle = {"border-color": "green"};
+          if (noOfItems <=3)
+            $scope.showMsg = "Enjoy!";
+          else
+            $scope.showMsg = "Too much!";
+        }
       }
     };
 
     function splitString(stringToSplit, separator) {
       var arrayOfStrings = stringToSplit.split(separator);
 
-      //Bonus part 3 has not been implemented yet!
+      //Bonus part 3 has been implemented !
+      //I do NOT consider empty item, i.e., , , towards to item count
       var totallength = arrayOfStrings.length;
       for (var i = 0; i < arrayOfStrings.length; i++) {
         if (arrayOfStrings[i].trim()=='') {
           totallength--;
         }
       }
-      if (totallength<=3) {
-        return "Enjoy!";
-      } else if (totallength>3) {
-        return "Too much!";
-      }
+      return totallength;
     }
-
+    
   }
+
 })();
