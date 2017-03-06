@@ -23,35 +23,45 @@
   function NarrowItDownController(MenuSearchService) {
     var menu = this;
 
-    //console.log(menu.searchString);
+      menu.searchMenuItems = function () {
+      console.log("HAHA: ",menu);
+      if (typeof menu.searchString === 'undefined' || menu.searchString == ""){
+        console.log("Inside if");
+        menu.showMessage = true;
+        menu.found = [];
+      } else {
+        menu.showMessage = false;
 
-    menu.searchMenuItems = function () {
-      var promise = MenuSearchService.getMatchedMenuItems(menu.searchString);
-
-      promise.then(function(response){
-        var foundArr = [];
-        var menuItems = response.data['menu_items'];
-        for (var i = 0; i < menuItems.length; i++) {
-          var desc = menuItems[i]['description'];
-          //console.log( desc);
-          if(desc.search(menu.searchString) != -1){
-            //console.log( "FOUND");
-            foundArr.push( menuItems[i]);
+        var promise = MenuSearchService.getMatchedMenuItems(menu.searchString);
+        console.log("Serach string: ",menu.searchString);
+        promise.then(function(response){
+          var foundArr = [];
+          var menuItems = response.data['menu_items'];
+          for (var i = 0; i < menuItems.length; i++) {
+            var desc = menuItems[i]['description'];
+            //console.log( desc);
+            if(desc.search(menu.searchString) != -1){
+              //console.log( "FOUND");
+              foundArr.push( menuItems[i]);
+            }
           }
-        }
-        menu.found = foundArr;
+          menu.found = foundArr;
 
-        if (foundArr.length == 0){
-          menu.showMessage = true;
-        } else {
-          menu.showMessage = false;
-        }
-      })
-      .catch(function(error){
-        console.log(error);
-      })
+          if (foundArr.length == 0 ||menu.searchString ==null ){
+            menu.showMessage = true;
+          } else {
+            menu.showMessage = false;
+          }
+        })
+        .catch(function(error){
+          console.log(error);
+        })
+      };
+    }
 
-    };
+
+
+
     menu.removeItem = function(itemIndex){
       menu.found.splice(itemIndex,1);
     };
