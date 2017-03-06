@@ -40,16 +40,19 @@
           }
         }
         menu.found = foundArr;
+
+        if (foundArr.length == 0){
+          menu.showMessage = true;
+        } else {
+          menu.showMessage = false;
+        }
       })
       .catch(function(error){
         console.log(error);
       })
 
     };
-      console.log(menu);
-
     menu.removeItem = function(itemIndex){
-      console.log("hahahahahhahhahahhahahhahahahhaha");
       menu.found.splice(itemIndex,1);
     };
   }

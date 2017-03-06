@@ -6,23 +6,28 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="angular.min.js"></script>
-    <script src="app2.js"></script>
+    <script src="app.js"></script>
   </head>
 <body ng-app='NarrowItDownApp'>
+
    <div class="container" ng-controller='NarrowItDownController as nIDCtrl'>
     <h1>Narrow Down Your Chinese Menu Choice</h1>
+    <div class="row">
+      <div>
+        <input type="text" placeholder="search term" class="form-control"
+        ng-model="nIDCtrl.searchString">
+      </div>
+      <div class="form-group narrow-button">
+        <button class="btn btn-primary"
+        ng-click='nIDCtrl.searchMenuItems()'>Narrow It Down For Me!</button>
+      </div>
+    </div>
 
-    <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control"
-      ng-model="nIDCtrl.searchString">
-    </div>
-    <div class="form-group narrow-button">
-      <button class="btn btn-primary"
-      ng-click='nIDCtrl.searchMenuItems()'>Narrow It Down For Me!</button>
-    </div>
-    <div>
-      <!-- found-items should be implemented as a component -->
+    <div class="row">
       <found-items menu='nIDCtrl'  on-remove="nIDCtrl.removeItem(index)"></found-items>
+    </div>
+    <div ng-if="nIDCtrl.showMessage">
+      Nothing Found!
     </div>
 
    </div>

@@ -1,6 +1,11 @@
 <ol>
-    <li ng-repeat="item in menu.found">
-      {{item.name}}
-      <button ng-click="onRemove({index: $index});">Don't want this one!</button>
-    </li>
+  <div class="row" ng-repeat="item in menu.found" style="background-color:lavender;">
+
+        <div class="col-sm-3"> {{item.name}}</div>
+        <div class="col-sm-1"> {{item.short_name}}</div>
+        <div class="col-sm-6"> {{item.description}}</div>
+        <div class="col-sm-2">
+          <button ng-click="onRemove({index: $index});">Don't want this one!</button>
+        </div>
+  </div>
 </ol>
