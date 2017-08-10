@@ -1,0 +1,10 @@
+<ol>
+  <div class="row"
+    ng-repeat="category in $ctrl.categories"
+    style="background-color:lavender;">
+
+    <a ui-sref="items">
+      <div class="col-sm-5"> {{category.name}}</div>
+    </a>
+  </div>
+</ol>

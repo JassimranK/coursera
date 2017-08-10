@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body ng-app='MenuApp'>
+
+
+  <!-- Libraries -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp/menuapp.module.js"></script>
+    <script src="src/data/data.module.js"></script>
+
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
+
+  <!-- module artifacts -->
+  <script src="src/menuapp/categories.component.js"></script>
+  <script src="src/menuapp/categories.controller.js"></script>
+  <script src="src/data/menudata.service.js"></script>
+
+   <!--<div class="container"
+    ng-controller='CategoriesListController as nIDCtrl'>
+    -->
+    <h1>Menu App</h1>
+    <div class="row">
+
+      <ui-view></ui-view>
+      <!--  <div class="form-group narrow-button">
+        <button class="btn btn-primary"
+        ng-click='nIDCtrl.getAllCategories()'>Get Categories!</button>
+      </div>
+      -->
+    </div>
+
+    <!-- <div class="row">
+      <categories-component categories='nIDCtrl.categories'></categories-component>
+    </div>-->
+   </div>
+
+</body>
+</html>
