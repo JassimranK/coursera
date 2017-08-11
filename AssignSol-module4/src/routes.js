@@ -23,26 +23,28 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Premade categorieslist page
   .state('categories', {
     url: '/categories-list',
-    templateUrl: 'src/menuapp/templates/categoriesList.template.html'
-    //controller: 'CategoriesListController as categList',
-    //resolve: {
-    //  categories: ['MenuDataService', function (MenuDataService) {
-    //    return MenuDataService.getAllCategories();
-    //  }]
-    //}
+    templateUrl: 'src/menuapp/templates/categoriesList.template.html',
+    controller: 'CategoriesListController as categList',
+    resolve: {
+      categories: ['MenuDataService', function (MenuDataService) {
+        return MenuDataService.getAllCategories();
+      }]
+    }
   })
 
   // Premade itemslist page
   .state('items', {
-    url: '/items-list',
+    url: '/items/{categoryShortName}',
     templateUrl: 'src/menuapp/templates/itemsList.template.html',
-    controller: 'ItemsListController as itemsCtrl'
-    //resolve: {
-    //  categories: ['MenuDataService', function (MenuDataService) {
-    //    return MenuDataService.getItems();
-    //  }]
-    //}
+    controller: 'ItemsListController as itemsList',
+    resolve: {
+      items:  ['$stateParams', 'MenuDataService',
+            function ($stateParams, MenuDataService) {
+              return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
+              }]
+    }
   });
+
 }
 
 })();

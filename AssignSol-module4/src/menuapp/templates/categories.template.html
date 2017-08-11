@@ -1,10 +1,11 @@
+<a ui-sref="home">Home</a> &lt;
 <ol>
   <div class="row"
     ng-repeat="category in $ctrl.categories"
     style="background-color:lavender;">
 
-    <a ui-sref="items">
-      <div class="col-sm-5"> {{category.name}}</div>
+    <a ui-sref="items({categoryShortName:category.short_name})">
+      {{category.name}}
     </a>
   </div>
 </ol>
