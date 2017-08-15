@@ -60,8 +60,6 @@
     }
 
 
-
-
     menu.removeItem = function(itemIndex){
       menu.found.splice(itemIndex,1);
     };
