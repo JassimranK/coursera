@@ -1,0 +1,25 @@
+input {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+button {
+  font-size: 17px;
+  font-weight: bold;
+  color: #61122f;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+#info {
+  margin-top: 20px;
+}
+
+#sign {
+  color: grey;
+}

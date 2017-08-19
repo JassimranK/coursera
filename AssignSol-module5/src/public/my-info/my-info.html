@@ -1,0 +1,27 @@
+<h2>My Info</h2>
+
+<div ng-controller="MyInfoController as disp">
+  <div class="row">
+    <div class="col-sm-5">
+      <div id="info" ng-show="disp.completed">
+
+        First name: {{ disp.user.firstname}} <br>
+        Last name: {{ disp.user.lastname}} <br>
+        Email: {{ disp.user.email}} <br>
+        Phone: {{ disp.user.phone }}<br>
+        Favorite Menu Item: {{ disp.user.favmenu}} ({{disp.user.name}})<br>
+        <p class="menu-item-details">Details: {{disp.user.description}}</p>
+        <div class="menu-item-description col-sm-7">
+            <div class="menu-item-photo">
+              <img class="img-responsive" width="250" height="150"
+                ng-src="{{disp.basePath}}/images/{{disp.user.favmenu}}.jpg"
+                alt="{{disp.user.name}}">
+            </div>
+        </div>
+     </div>
+   </div>
+ </div>
+ <div id="warn" ng-hide="disp.completed">
+   Not signed up yet! <a ui-sref="public.sign-up"> Sign Up Now! </a>
+ </div>
+</div>
