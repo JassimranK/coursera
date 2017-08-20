@@ -9,10 +9,9 @@ function SignUpController(MenuService) {
   reg.completed = false;
 
   reg.submit = function (user) {
-    var promise = MenuService.validateMenuShortName(user.favmenu);
+    var promise = MenuService.validateMenuShortName(user.favmenu.toUpperCase());
     promise.then(function(result){
       var shortnames = result.short_name
-      console.log(shortnames);
       reg.completed = true;
       reg.error = false;
       MenuService.saveUserInfo(user, result.name, result.description);
