@@ -20,6 +20,7 @@ describe "Module #3 Summative: Implement Results Collection" do
     end
   end
 
+ 
   before :each do
     Entrant.collection.delete_many
   end
@@ -61,6 +62,7 @@ describe "Module #3 Summative: Implement Results Collection" do
     end
 
     it "Entrant class creates documents with all specified fields" do
+
       expect(e0 = Entrant.new(:bib=>bib, :secs=>secs)).to_not be_nil
       expect(e0.overall = Placing.demongoize(overall_placing)).to_not be_nil
       expect(e0.gender = Placing.demongoize(gender_placing)).to_not be_nil
