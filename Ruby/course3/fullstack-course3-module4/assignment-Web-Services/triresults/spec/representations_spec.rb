@@ -26,9 +26,11 @@ feature "Module #4 Representations", :type => :routing do
   end
 
   context "rq01" do
+
     scenario "GET /api/races/:id with Accept:application/xml returns xml formatted output/error" do    
       expect(test_race = Race.create(:name=>"First Race", :date=>Date.current)).to_not be_nil
-      page.driver.header('Accept', 'application/xml')  
+      page.driver.header('Accept', 'application/xml') 
+ 
       page.driver.get("/api/races/#{test_race.id}")
       expect(page.status_code).to eql(200)
       expect(page.response_headers["Content-Type"]).to include("application/xml")

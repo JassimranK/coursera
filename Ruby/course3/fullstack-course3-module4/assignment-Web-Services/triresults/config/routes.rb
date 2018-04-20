@@ -51,6 +51,16 @@ Rails.application.routes.draw do
     post "entries" => "racers#create_entry"
   end
 
+  namespace :api do
+    resources :races do
+      resources :race_results, path: "results"
+    end
+    resources :racers do
+      resources :racer_entries, path: "entries" 
+    end
+
+  end
+
   # Example resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
