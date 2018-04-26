@@ -1,6 +1,6 @@
-##Ruby on Rails: An Introduction
+## [Ruby on Rails: An Introduction](https://www.coursera.org/learn/ruby-on-rails-intro/)
 
-**About this Course:**Did you ever want to build a web application?  Perhaps you even started down that path in a language like Java or C#, when you realized that there was so much “climbing the mountain” that you had to do? Maybe you have heard about web services being all the rage, but thought they were too complicated to integrate into your web application. Or maybe you wondered how deploying web applications to the cloud works, but there was too much to set up just to get going.
+**About this Course:** Did you ever want to build a web application?  Perhaps you even started down that path in a language like Java or C#, when you realized that there was so much “climbing the mountain” that you had to do? Maybe you have heard about web services being all the rage, but thought they were too complicated to integrate into your web application. Or maybe you wondered how deploying web applications to the cloud works, but there was too much to set up just to get going.
  
 In this course, we will explore how to build web applications with the Ruby on Rails web application framework, which is geared towards rapid prototyping.  Yes, that means building quickly! At the conclusion of this course, you will be able to build a meaningful web application and deploy it to the “cloud” using a Heroku PaaS (Platform as a Service). Best of all, it will almost feel effortless… Really!
  
