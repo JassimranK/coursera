@@ -1,18 +1,8 @@
 Module 2 Coding Assignment
 =======
-[Click here to SIGN UP for the ***Single Page Web Applications with AngularJS*** course on Coursera](https://www.coursera.org/learn/single-page-web-apps-with-angularjs). It's FREE!
+[Click here to VIEW the deployed project on Github](https://jassimran.github.io/AngularJS/Module%202%20-%20Filters%2C%20Digest%20Cycle%2C%20Controller%20Inheritance%2C%20and%20Custom%20Services).
 
-**Ready to implement some cool dynamic behavior right in your web page?! Oh, and do it in an architecturally correct/elegant way?!**
-
-## Time to Complete
-It should take about an 1 hour or less. (This is just an estimate. People's backgrounds differ, so for some people it will take longer to complete.)
-
-**Ask questions in [Week 2 Discussion Forum](https://www.coursera.org/learn/single-page-web-apps-with-angularjs/discussions/weeks/2) if you get stuck! We are all learning, and going through getting stuck and then unstuck (even with someone’s help) can be a very valuable learning experience!**
-
-### **DO NOT be scared by the length of this assignment! It’s really not so much at all. I just wanted to explain everything as clearly as I could and break it down into smaller steps for your benefit.**
-
-
-## Assignment Instructions
+## Instructions
 
 ### General Idea
 The idea of this assignment is to create a "check off" shopping List application.
