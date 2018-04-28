@@ -1,18 +1,8 @@
 Module 4 Coding Assignment
 =======
-[Click here to SIGN UP for the ***Single Page Web Applications with AngularJS*** course on Coursera](https://www.coursera.org/learn/single-page-web-apps-with-angularjs). It's FREE!
+[Click here to VIEW the project deployed on Github](https://jassimran.github.io/AngularJS/Module%204%20-%20Components%2C%20Events%2C%20Modules%2C%20and%20Routing)
 
-**Time to code something cool! Yay!!!**
-
-## Time to Complete
-It should take about an 1.5 hours or less. (This is just an estimate. People's backgrounds differ, so for some people it will take longer to complete.)
-
-**Ask questions in [Week 4 Discussion Forum](https://www.coursera.org/learn/single-page-web-apps-with-angularjs/discussions/weeks/4) if you get stuck! We are all learning, and going through getting stuck and then unstuck (even with someone’s help) can be a very valuable learning experience!**
-
-### **DO NOT be scared by the length of this assignment! It’s not long at all! I just wanted to explain everything as clearly as I could and break it down into smaller steps for your benefit.**
-
-
-## Assignment Instructions
+## Instructions
 
 ### General Idea
 Super simple idea behind this week's assignment: use the restaurant menu REST API to create a master/detail view pair.
