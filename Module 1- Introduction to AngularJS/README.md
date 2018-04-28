@@ -1,18 +1,8 @@
 Module 1 Coding Assignment
 =======
-[Click here to SIGN UP for the ***Single Page Web Applications with AngularJS*** course on Coursera](https://www.coursera.org/learn/single-page-web-apps-with-angularjs). It's FREE!
+[Click here to VIEW the project on Github](https://jassimran.github.io/AngularJS/Module%201-%20Introduction%20to%20AngularJS/).
 
-**CODING TIME!!!** You are able to code up your very first AngularJS application! How exciting is that?!
-
-## Time to Complete
-It should take about an 1 hour or less. (This is just an estimate. People's backgrounds differ, so for some people it will take longer to complete.)
-
-**Ask questions in [Week 1 Discussion Forum](https://www.coursera.org/learn/single-page-web-apps-with-angularjs/discussions/weeks/1) if you get stuck! We are all learning, and going through getting stuck and then unstuck (even with someone’s help) can be a very valuable learning experience!**
-
-### **DO NOT be scared by the length of this assignment! It’s really not so much at all. I just wanted to explain everything as clearly as I could and break it down into smaller steps for your benefit.**
-
-
-## Assignment Instructions
+## Instructions
 
 ### General Idea
 The idea of this assignment is to create a front-end application that presents the user with a textbox where they can list comma-separated items they usually eat for lunch. Once that's entered, the user has to click the "Check If Too Much" button.
