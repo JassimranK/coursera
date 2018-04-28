@@ -1,2 +1,0 @@
-About this course: The primary topics in this part of the specialization are: asymptotic ("Big-oh") notation, sorting and searching, divide and conquer (master method, integer and matrix multiplication, closest pair), and randomized algorithms (QuickSort, contraction algorithm for min cuts).
-Who is this class for: Learners with at least a little bit of programming experience who want to learn the essentials of algorithms. In a University computer science curriculum, this course is typically taken in the third year.
